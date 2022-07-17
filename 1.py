@@ -24,3 +24,5 @@ if (num % 2) == 0:
 else:
    print("Число {0} є не парним".format(num))
 
+
+
