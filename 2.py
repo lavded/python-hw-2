@@ -18,22 +18,23 @@
 #   transformStr('Luxery') - > 'luxer...' (Починается на L + довжина більше 5 символів)
 
 
-#def transformStr(str):
+def transformStr(str):
+    str = input('Введіть текст')
 
-str = int(input("Введіть текст: "))
+    if len(str) > 5:
+      print(str[0:5]+ "...")                 # символів та в кінці додати три точки (...).
 
-if len(str) > 5:
-    print(str[0:5]+ "...")                 # символів та в кінці додати три точки (...).
-
-for w in str.split():                      #пройтись по кожному слову
-     if(w.startswith("u" or "U")):                 # Якщо перша літера строчки U або u
-      print('upperCase', str.upper(w))
+    for str in str.split():                  #пройтись по кожному слову
+     if(str.startswith("u" or "U")):         # Якщо перша літера строчки U або u
+      print('upperCase', str.upper(str))
     
-for w in str.split():                      
-     if(w.startswith("l" or "L")):                 # Якщо перша літера строчки L або l    
-        print('lowerCase', str.upper(w))
-else:
-    print(str)
+    for str in str.split():                      
+     if(str.startswith("l" or "L")):         # Якщо перша літера строчки L або l    
+        print('lowerCase', str.upper(str))
+    else:
+      print(str)
+
+transformStr(str)
 
 
 #print('Напишіть логіку тут...')
