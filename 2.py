@@ -26,11 +26,11 @@ if len(str) > 5:
     print(str[0:5]+ "...")                 # символів та в кінці додати три точки (...).
 
 for w in str.split():                      #пройтись по кожному слову
-     if(w.startswith("u")):                 # Якщо перша літера строчки U або u
+     if(w.startswith("u" or "U")):                 # Якщо перша літера строчки U або u
       print('upperCase', str.upper(w))
     
 for w in str.split():                      
-     if(w.startswith("l")):                 # Якщо перша літера строчки L або l    
+     if(w.startswith("l" or "L")):                 # Якщо перша літера строчки L або l    
         print('lowerCase', str.upper(w))
 else:
     print(str)
